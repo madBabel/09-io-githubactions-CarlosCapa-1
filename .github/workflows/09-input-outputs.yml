@@ -46,7 +46,7 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     if: ${{inputs.dry-run == false && needs.build.outputs.status == 'success'}}
-    environment: ${{ nputs.target }}
+    environment: ${{ inputs.target }}
     steps:          
       - name: Deploy
         run: |
